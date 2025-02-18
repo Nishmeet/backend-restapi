@@ -78,7 +78,7 @@ exports.getAllUsers = async (req, res, next) => {
                   ${typeof items === 'object' ? 
                     Object.entries(items).map(([item, amount]) => `
                       <div class="item">
-                        ${item}: <span class="amount">$${amount}</span>
+                        ${item}: <span class="amount">${amount}</span>
                       </div>
                     `).join('') : 
                     `<div class="item">${items}</div>`
@@ -190,11 +190,8 @@ exports.updateUser = async (req, res, next) => {
         ...currentData.address,
         ...updates.address
       },
-      // preferences: {
-      //   ...currentData.preferences,
-      //   ...updates.preferences
-      // },
-      //updatedAt: new Date().toISOString()
+      
+      updatedAt: new Date().toISOString()
     };
     
     await userRef.update(updatedUser);
