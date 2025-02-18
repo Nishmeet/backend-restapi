@@ -2,34 +2,46 @@
 
 A RESTful API for managing personal finances built with Node.js, Express, and Firebase.
 
+## Overview
+
+This API provides endpoints for managing users, expenses, and income data with Firebase integration. It includes user authentication, CRUD operations, and search functionality.
+
 ## Features
 
 - User Management (CRUD operations)
 - Expense Tracking
 - Income Management
 - Search Functionality
+- Firebase Integration
+- Error Handling
+- Input Validation
 
-## Setup
+## Prerequisites
 
-1. Clone the repository
-2. Install dependencies: `npm install`
-3. Create `.env` file with your Firebase credentials
-4. Run the server: `npm start`
+- Node.js (v14 or higher)
+- npm (Node Package Manager)
+- Firebase Account and Project
 
-## API Endpoints
+## Installation & Dependency Explanations:
 
-### Users
+1. **Core Dependencies:**
 
-- GET /users - Get all users
-- POST /users - Create user
-- PUT /users/:id - Update user
-- DELETE /users/:id - Delete user
-- GET /users/search - Search users
-- GET /users/search/:email - Search by email
+   - `express`: Web framework for Node.js
+   - `firebase-admin`: Firebase SDK for server
+   - `dotenv`: Environment variables management
+   - `cors`: Cross-Origin Resource Sharing
 
-### Expenses & Income
+2. **Dev Dependencies:**
 
-- GET /expenses - Get all expenses
-- POST /expenses - Create expense
-- PUT /expenses/:id - Update expense
-- DELETE /expenses/:id - Delete expense
+   - `nodemon`: Auto-restart server during development
+
+### Installation Steps:
+
+1. **Create project folder:**
+2. **Initialize npm:**
+   -npm init -y
+   -npm install express firebase-admin dotenv cors
+   -npm install nodemon --save-dev
+
+3. **Create project structure:**
+   mkdir -p src/{controllers,routes,middleware,config}
